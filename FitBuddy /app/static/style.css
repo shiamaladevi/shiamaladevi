@@ -1,0 +1,8 @@
+*{box-sizing:border-box}body{margin:0;font-family:Arial,sans-serif;background:linear-gradient(135deg,#eef7ff,#f4f1ff);color:#1d2433}
+.page{min-height:100vh;padding:40px 18px;display:flex;justify-content:center}.card,.wide-card{width:min(680px,100%);background:#fff;padding:30px;border-radius:20px;box-shadow:0 18px 55px rgba(30,40,80,.14)}.wide-card{width:min(1200px,100%)}
+.brand{font-weight:800;font-size:20px}label{display:block;margin-top:16px;font-weight:700}input,select,textarea{width:100%;margin-top:7px;padding:12px;border:1px solid #d5dbea;border-radius:10px;font-size:15px}textarea{min-height:110px}
+button{width:100%;margin-top:22px;padding:13px;border:0;border-radius:10px;background:#2563eb;color:white;font-weight:800;cursor:pointer}.profile,.tip,.success{background:#f3f7ff;padding:14px;border-radius:12px;margin:18px 0}.success{background:#e9f9ef;color:#146c35}
+pre{white-space:pre-wrap;word-wrap:break-word;background:#f7f8fb;border-radius:12px;padding:18px;line-height:1.5}.table-wrap{overflow-x:auto}table{width:100%;border-collapse:collapse;min-width:1000px}th,td{border:1px solid #e1e5ee;padding:10px;vertical-align:top;text-align:left}th{background:#eef4ff}td pre{max-width:430px;font-size:12px}a{color:#2563eb;text-decoration:none}
+@media(max-width:600px){.card,.wide-card{padding:20px}.page{padding:20px 10px}}
+/* Status messages */
+.notice,.error{padding:14px;border-radius:12px;margin:18px 0;background:#fff5df;color:#7a4b00}.error{background:#fff0f0;color:#9b1c1c}

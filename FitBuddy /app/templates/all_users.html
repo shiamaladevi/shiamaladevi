@@ -1,0 +1,11 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>FitBuddy Admin</title><link rel="stylesheet" href="/static/style.css"></head>
+<body><main class="page"><section class="wide-card">
+<div class="brand">🏋️ FitBuddy Admin</div><h1>All Users & Workout Plans</h1>
+<div class="table-wrap"><table><thead><tr><th>ID</th><th>Name</th><th>Age</th><th>Weight</th><th>Goal</th><th>Intensity</th><th>Original Plan</th><th>Updated Plan</th></tr></thead>
+<tbody>{% for user, plan in records %}<tr><td>{{user.user_id}}</td><td>{{user.username}}</td><td>{{user.age}}</td>
+<td>{{user.weight}}</td><td>{{user.goal}}</td><td>{{user.intensity}}</td>
+<td><pre>{{plan.original_plan if plan else ""}}</pre></td><td><pre>{{plan.updated_plan if plan and plan.updated_plan else "Not updated"}}</pre></td></tr>
+{% else %}<tr><td colspan="8">No users yet.</td></tr>{% endfor %}</tbody></table></div>
+<p><a href="/">← Back to Home</a></p></section></main></body></html>

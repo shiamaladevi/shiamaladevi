@@ -1,0 +1,18 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>FitBuddy Result</title><link rel="stylesheet" href="/static/style.css"></head>
+<body><main class="page"><section class="wide-card">
+<div class="brand">🏋️ FitBuddy</div><h1>Your Personalized Workout Plan</h1>
+{% if message %}<div class="{{ 'success' if 'updated' in message|lower else 'notice' }}" role="status">{{ message }}</div>{% endif %}
+{% if username %}<div class="profile"><b>Name:</b> {{username}} &nbsp; <b>ID:</b> {{user_id}} &nbsp;
+<b>Age:</b> {{age}} &nbsp; <b>Weight:</b> {{weight}} kg &nbsp; <b>Goal:</b> {{goal}} &nbsp;
+<b>Intensity:</b> {{intensity}}</div>{% endif %}
+{% if workout_plan %}<h2>📅 Workout Plan</h2><pre>{{workout_plan}}</pre>{% endif %}
+{% if nutrition_tip %}<h2>💡 Nutrition / Recovery Tip</h2><div class="tip">{{nutrition_tip}}</div>{% endif %}
+{% if updated_plan %}<h2>🔄 Updated Workout Plan</h2><pre>{{updated_plan}}</pre>{% endif %}
+{% if user_id %}<h2>📝 Share Your Feedback</h2>
+<form method="post" action="/submit-feedback"><input type="hidden" name="user_id" value="{{user_id}}">
+<textarea name="feedback" required placeholder="Example: Add more cardio and one extra rest day."></textarea>
+<button>Submit Feedback</button></form>{% endif %}
+<p><a href="/">← Create Another Plan</a> &nbsp; <a href="/view-all-users">View All Users →</a></p>
+</section></main></body></html>

@@ -1,0 +1,36 @@
+FITBUDDY - RUN IN VS CODE
+
+1. Open this folder in VS Code.
+
+2. Open Terminal -> New Terminal.
+
+3. Run:
+python3 -m venv venv
+
+4. Run:
+source venv/bin/activate
+
+5. Run:
+pip install -r requirements.txt
+
+6. Create .env:
+cp .env.example .env
+
+7. Open .env and add your Gemini API key (optional; a basic starter plan works without it):
+GOOGLE_API_KEY=YOUR_KEY_HERE
+
+8. Start:
+uvicorn app.main:app --reload
+
+9. Open in Chrome:
+http://127.0.0.1:8000
+
+API:
+http://127.0.0.1:8000/docs
+
+ADMIN:
+http://127.0.0.1:8000/view-all-users
+
+IMPORTANT:
+- Do not upload .env to GitHub.
+- Keep the terminal running while using the website.
